@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import EmploymentItem from "./EmploymentItem";
 
 let idCount = 0;
 
@@ -34,6 +35,17 @@ export default class Employment extends Component {
     return (
       <section id="three">
         <h2>Employment History</h2>
+
+        <EmploymentItem
+          employment={EMPLOYMENT_HISTORY.map(
+            ({ id, timeFrame, company, jobTitle, description }) => ({
+              timeFrame,
+              company,
+              jobTitle,
+              description
+            })
+          )}
+        />
       </section>
     );
   }
