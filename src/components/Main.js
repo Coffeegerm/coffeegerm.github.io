@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class Main extends Component {
   render() {
@@ -12,21 +12,25 @@ export default class Main extends Component {
           </h2>
         </header>
         <p>
-          Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi
-          lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis
-          tortor primis integer massa adipiscing id nisi accumsan pellentesque
-          commodo blandit enim arcu non at amet id arcu magna. Accumsan orci
-          faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque
-          cubilia.
+          I started programming when I was 15 years old and never stopped breaking and fixing,
+          reading and writing, and most importantly; learning. Programming has become more of a way
+          of life than simply a job or a hobby, it's become a focal point of who I am as a person.
+          <br />
+          Besides programming I do other things too! (Shocking, I know) I enjoy playing Magic: The
+          Gathering, reading, playing a few games here and there, and searching for new beers to try
+          and for the perfect Tom Collins.
         </p>
         <ul className="actions">
           <li>
+            {
+              // this will eventually take you to my blog
+            }
             <a href="#" className="button">
               Learn More
             </a>
           </li>
         </ul>
       </section>
-    )
+    );
   }
 }
