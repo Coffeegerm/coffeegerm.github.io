@@ -6,8 +6,9 @@ export default class Contact extends Component {
       <section id="four">
         <h2>Talk to Me</h2>
         <p>
-          If interested in communicating with me, feel free to send me a message through Twitter or
-          an email. I'm always willing to chat about code or other things!
+          If interested in communicating with me, feel free to send me a message
+          through Twitter or an email. I'm always willing to chat about code or
+          other things!
         </p>
         <div className="row">
           <div className="8u 12u$(small)">
@@ -17,10 +18,20 @@ export default class Contact extends Component {
                   <input type="text" name="name" id="name" placeholder="Name" />
                 </div>
                 <div className="6u 12u$(xsmall)">
-                  <input type="email" name="email" id="email" placeholder="Email" />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
                 </div>
                 <div className="12u">
-                  <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    rows="4"
+                  ></textarea>
                 </div>
               </div>
             </form>
@@ -30,6 +41,7 @@ export default class Contact extends Component {
               </li>
             </ul>
           </div>
+
           <div className="4u 12u$(small)">
             <ul className="labeled-icons">
               <li>
@@ -50,7 +62,9 @@ export default class Contact extends Component {
                 <h3 className="icon fa-envelope-o">
                   <span className="label">Email</span>
                 </h3>
-                <a href="mailto:dyarzebinski97@gmail.com">dyarzebinski97@gmail.com</a>
+                <a href="mailto:dyarzebinski97@gmail.com">
+                  dyarzebinski97@gmail.com
+                </a>
               </li>
             </ul>
           </div>
