@@ -1,14 +1,15 @@
-import React from "react";
+/* eslint-disable react/jsx-one-expression-per-line */
+import React from 'react';
 
-import Footer from "./Footer";
-import avatar from "../assets/images/avatar.jpg";
+import Footer from './Footer';
+import avatar from '../assets/images/avatar.jpg';
 
-class Header extends React.Component {
+class Header extends React.PureComponent {
   render() {
     return (
       <header id="header">
         <div className="inner">
-          <a className="image avatar">
+          <a className="image avatar" href="twitter.com/coffeegerm">
             <img src={avatar} alt="" />
           </a>
           <h1>

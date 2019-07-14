@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+/* eslint-disable consistent-return */
+/* eslint-disable react/prop-types */
+import React, { Component } from 'react';
 
 export default class EmploymentItem extends Component {
-  render() {
-    return <div>{this.renderEmploymentHistory()}</div>;
-  }
-
   renderEmploymentHistory = () => {
     const { employment } = this.props;
 
@@ -12,6 +10,7 @@ export default class EmploymentItem extends Component {
 
     const job = employment.map((item, index) => {
       return (
+        // eslint-disable-next-line react/no-array-index-key
         <article className="6u 12u$(xsmall) work-item" key={index}>
           <h2>
             <strong>{item.company}</strong>
@@ -25,4 +24,8 @@ export default class EmploymentItem extends Component {
 
     return <div className="row">{job}</div>;
   };
+
+  render() {
+    return <div>{this.renderEmploymentHistory()}</div>;
+  }
 }

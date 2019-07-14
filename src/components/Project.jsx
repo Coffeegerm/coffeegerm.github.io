@@ -1,4 +1,7 @@
-import React, { Component } from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable consistent-return */
+import React, { Component } from 'react';
 
 export default class Project extends Component {
   renderProjects = () => {
