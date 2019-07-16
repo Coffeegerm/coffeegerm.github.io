@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { Link } from 'gatsby';
 
 export default class Main extends React.PureComponent {
   render() {
@@ -22,10 +23,9 @@ export default class Main extends React.PureComponent {
         </p>
         <ul className="actions">
           <li>
-            {
-              // this will eventually take you to my blog
-            }
-            <a className="button">Learn More</a>
+            <Link to="/blog/" className="button">
+              Learn More
+            </Link>
           </li>
         </ul>
       </section>

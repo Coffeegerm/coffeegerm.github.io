@@ -1,10 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 
-export default class NotFoundPage extends React.PureComponent {
+export default class HomeIndex extends React.PureComponent {
   render() {
     return (
       <Layout>
@@ -14,11 +13,7 @@ export default class NotFoundPage extends React.PureComponent {
         </Helmet>
 
         <div id="main">
-          <h1>404</h1>
-          <p>Somehow you ended here</p>
-          <Link to="/" className="button">
-            Let&apos;s go back
-          </Link>
+          <p>This is the blog</p>
         </div>
       </Layout>
     );
