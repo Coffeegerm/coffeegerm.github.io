@@ -14,7 +14,7 @@ export default class Project extends Component {
         <article className="6u 12u$(xsmall) work-item" key={index}>
           <h3>{item.name}</h3>
           <p>{item.description}</p>
-          <a className="fit button" href={item.url}>
+          <a className="fit button slightMarginToTop" href={item.url}>
             Repository
           </a>
         </article>
