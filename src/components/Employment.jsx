@@ -7,7 +7,7 @@ const EMPLOYMENT_HISTORY = [
   {
     id: idCount + 1,
     timeFrame: 'May, 2019 - Present',
-    company: 'CloudFit',
+    company: 'CloudFit Software',
     jobTitle: 'Software Development Engineer',
     description:
       'Working on a team of developers we used React Native, React, and C# to create incredibly looking applications for multiple clients and implemented ways to help bring them from the days of paper management to the modern day cloud solution.'
@@ -31,19 +31,17 @@ const EMPLOYMENT_HISTORY = [
 ];
 
 export default class Employment extends React.PureComponent {
+  renderEmploymentHistory = () => {
+    return EMPLOYMENT_HISTORY.map(item => {
+      return <EmploymentItem employment={item} />;
+    });
+  };
+
   render() {
     return (
       <section id="three">
         <h2>Employment History</h2>
-
-        <EmploymentItem
-          employment={EMPLOYMENT_HISTORY.map(({ timeFrame, company, jobTitle, description }) => ({
-            timeFrame,
-            company,
-            jobTitle,
-            description
-          }))}
-        />
+        <div className="row">{this.renderEmploymentHistory()}</div>
       </section>
     );
   }
