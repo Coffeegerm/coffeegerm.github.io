@@ -14,6 +14,14 @@ module.exports = {
         icon: 'src/assets/images/website-icon.png' // This path is relative to the root of the site.
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `src/articles`
+      }
+    },
+    `gatsby-transformer-remark`,
     'gatsby-plugin-sass',
     'gatsby-plugin-offline'
   ]

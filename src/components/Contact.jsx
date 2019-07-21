@@ -35,17 +35,12 @@ export default class Contact extends PureComponent {
         </p>
         <div className="row">
           <div className="8u 12u$(small)">
-            <form
-              // eslint-disable-next-line react/destructuring-assignment
-              action={`mailto:dyarzebinski97@gmail.com?subject=Let's Talk!`}
-              method="POST"
-              encType="text/plain"
-            >
+            <form action={`mailto:dyarzebinski97@gmail.com?subject=Let's Talk!`} method="POST" encType="text/plain">
               <div className="row uniform 50%">
                 <div className="6u 12u$(xsmall)">
                   <input
                     type="text"
-                    name="Name "
+                    name="Name"
                     id="name"
                     placeholder="Name"
                     onChange={this.handleNameChange}
@@ -55,7 +50,7 @@ export default class Contact extends PureComponent {
                 <div className="6u 12u$(xsmall)">
                   <input
                     type="email"
-                    name="Email "
+                    name="Email"
                     id="email"
                     placeholder="Email"
                     onChange={this.handleEmailChange}
@@ -64,7 +59,7 @@ export default class Contact extends PureComponent {
                 </div>
                 <div className="12u">
                   <textarea
-                    name="Message "
+                    name="Message"
                     id="message"
                     placeholder="Message"
                     rows="4"

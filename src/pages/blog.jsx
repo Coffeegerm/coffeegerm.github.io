@@ -13,7 +13,8 @@ export default class HomeIndex extends React.PureComponent {
         </Helmet>
 
         <div id="main">
-          <p>This is the blog</p>
+          <h1>Under construction</h1>
+          <p>Coming Soon</p>
         </div>
       </Layout>
     );
