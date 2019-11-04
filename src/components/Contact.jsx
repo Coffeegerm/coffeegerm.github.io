@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import sendEmail from '../common/email.ts';
 
 export default class Contact extends PureComponent {
   constructor(props) {
@@ -70,7 +71,7 @@ export default class Contact extends PureComponent {
               </div>
               <ul className="actions slightMarginToTop">
                 <li>
-                  <input type="submit" value="Send Message" />
+                  <input type="submit" value="Send Message" onClick={() => sendEmail(name, email, message)} />
                 </li>
               </ul>
             </form>
