@@ -19,11 +19,8 @@ export default class HomeIndex extends React.PureComponent {
 
         <div id="main">
           <Main />
-
           <Portfolio />
-
           <Employment />
-
           <Contact />
         </div>
       </Layout>

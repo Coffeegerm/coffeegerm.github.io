@@ -14,7 +14,7 @@ export default class HomeIndex extends React.PureComponent {
 
         <div id="main">
           <h1>Under construction</h1>
-          <p>Coming Soon</p>
+          <p>Coming Soon!</p>
         </div>
       </Layout>
     );

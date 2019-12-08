@@ -19,7 +19,7 @@ export default class Main extends React.PureComponent {
           it&apos;s become a focal point of who I am as a person.
           <br />
           Besides programming I do other things too! (Shocking, I know) I enjoy playing Magic: The Gathering, reading,
-          playing a few games here and there, and searching for new beers to try and for the perfect Tom Collins.
+          playing a few games here and there, searching for new beers to try, as well as for the perfect Tom Collins.
         </p>
         <ul className="actions">
           <li>
