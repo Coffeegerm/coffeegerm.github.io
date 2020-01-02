@@ -30,19 +30,17 @@ const EMPLOYMENT_HISTORY = [
   }
 ];
 
-export default class Employment extends React.PureComponent {
-  renderEmploymentHistory = () => {
-    return EMPLOYMENT_HISTORY.map(item => {
-      return <EmploymentItem employment={item} />;
-    });
-  };
+const Employment = () => {
+  return (
+    <section id="three">
+      <h2>Employment History</h2>
+      <div className="row">
+        {EMPLOYMENT_HISTORY.map(item => (
+          <EmploymentItem employment={item} />
+        ))}
+      </div>
+    </section>
+  );
+};
 
-  render() {
-    return (
-      <section id="three">
-        <h2>Employment History</h2>
-        <div className="row">{this.renderEmploymentHistory()}</div>
-      </section>
-    );
-  }
-}
+export default Employment;

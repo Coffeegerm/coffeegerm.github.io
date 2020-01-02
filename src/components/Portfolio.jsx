@@ -41,28 +41,26 @@ const PROJECTS = [
   }
 ];
 
-export default class Portfolio extends React.PureComponent {
-  renderProjects = () => {
-    return PROJECTS.map(project => {
-      return <Project project={project} />;
-    });
-  };
+const Portfolio = () => {
+  return (
+    <section id="two">
+      <h2>Personal Projects</h2>
 
-  render() {
-    return (
-      <section id="two">
-        <h2>Personal Projects</h2>
+      <div className="row">
+        {PROJECTS.map(project => (
+          <Project project={project} />
+        ))}
+      </div>
 
-        <div className="row">{this.renderProjects()}</div>
+      <ul className="actions">
+        <li>
+          <a href="https://github.com/Coffeegerm" target="_blank" rel="noopener noreferrer" className="button">
+            Full Portfolio
+          </a>
+        </li>
+      </ul>
+    </section>
+  );
+};
 
-        <ul className="actions">
-          <li>
-            <a href="https://github.com/Coffeegerm" target="_blank" rel="noopener noreferrer" className="button">
-              Full Portfolio
-            </a>
-          </li>
-        </ul>
-      </section>
-    );
-  }
-}
+export default Portfolio;

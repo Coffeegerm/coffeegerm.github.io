@@ -8,22 +8,21 @@ import Contact from '../components/Contact';
 
 import Layout from '../components/layout';
 
-export default class HomeIndex extends React.PureComponent {
-  render() {
-    return (
-      <Layout>
-        <Helmet>
-          <title>David Yarzebinski</title>
-          <meta name="description" content="The Coffeegerm" />
-        </Helmet>
+import Meta from '../components/Meta';
 
-        <div id="main">
-          <Main />
-          <Portfolio />
-          <Employment />
-          <Contact />
-        </div>
-      </Layout>
-    );
-  }
-}
+const HomeIndex = () => {
+  return (
+    <Layout>
+      <Meta title="David Yarzebinski" />
+
+      <div id="main">
+        <Main />
+        <Portfolio />
+        <Employment />
+        <Contact />
+      </div>
+    </Layout>
+  );
+};
+
+export default HomeIndex;

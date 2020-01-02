@@ -4,23 +4,22 @@ import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 
-export default class NotFoundPage extends React.PureComponent {
-  render() {
-    return (
-      <Layout>
-        <Helmet>
-          <title>David Yarzebinski</title>
-          <meta name="description" content="The Coffeegerm" />
-        </Helmet>
+import Meta from '../components/Meta';
 
-        <div id="main">
-          <h1>404</h1>
-          <p>Somehow you ended here</p>
-          <Link to="/" className="button">
-            Let&apos;s go back
-          </Link>
-        </div>
-      </Layout>
-    );
-  }
-}
+const NotFoundPage = () => {
+  return (
+    <Layout>
+      <Meta title="404" />
+
+      <div id="main">
+        <h1>404</h1>
+        <p>Somehow you ended here</p>
+        <Link to="/" className="button">
+          Let&apos;s go back
+        </Link>
+      </div>
+    </Layout>
+  );
+};
+
+export default NotFoundPage;
