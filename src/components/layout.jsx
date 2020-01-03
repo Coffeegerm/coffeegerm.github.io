@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/scss/main.scss';
-
+import PropTypes from 'prop-types';
 import Header from './Header';
 
 const Template = props => {
@@ -12,6 +12,10 @@ const Template = props => {
       {children}
     </div>
   );
+};
+
+Template.propTypes = {
+  children: PropTypes.element
 };
 
 export default Template;

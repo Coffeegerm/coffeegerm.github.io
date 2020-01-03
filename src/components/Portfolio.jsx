@@ -13,14 +13,16 @@ const PROJECTS = [
     id: '2',
     url: 'https://github.com/Coffeegerm/GlucoseGuide',
     name: 'Glucose Guide',
-    description: 'Android Application to assist Diabetics in keeping track of their blood sugars and insulin intake.',
+    description:
+      'Android Application to assist Diabetics in keeping track of their blood sugars and insulin intake.',
     label: 'Repository'
   },
   {
     id: '3',
     url: 'https://github.com/Coffeegerm/BetterBarista',
     name: 'Better Barista',
-    description: 'A simple application to show users the beauty of making well crafted coffee at home.',
+    description:
+      'A simple application to show users the beauty of making well crafted coffee at home.',
     label: 'Repository'
   },
   {
@@ -41,26 +43,29 @@ const PROJECTS = [
   }
 ];
 
-const Portfolio = () => {
-  return (
-    <section id="two">
-      <h2>Personal Projects</h2>
+const Portfolio = () => (
+  <section id="two">
+    <h2>Personal Projects</h2>
 
-      <div className="row">
-        {PROJECTS.map(project => (
-          <Project project={project} />
-        ))}
-      </div>
+    <div className="row">
+      {PROJECTS.map(project => (
+        <Project project={project} />
+      ))}
+    </div>
 
-      <ul className="actions">
-        <li>
-          <a href="https://github.com/Coffeegerm" target="_blank" rel="noopener noreferrer" className="button">
-            Full Portfolio
-          </a>
-        </li>
-      </ul>
-    </section>
-  );
-};
+    <ul className="actions">
+      <li>
+        <a
+          href="https://github.com/Coffeegerm"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button"
+        >
+          Full Portfolio
+        </a>
+      </li>
+    </ul>
+  </section>
+);
 
 export default Portfolio;

@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const EmploymentItem = props => {
-  const { company, timeFrame, jobTitle, description } = props.employment;
+  const { employment } = props;
+  const { company, timeFrame, jobTitle, description } = employment;
 
   return (
     <article className="6u 12u$(xsmall) work-item">
@@ -13,6 +15,10 @@ const EmploymentItem = props => {
       <p>{description}</p>
     </article>
   );
+};
+
+EmploymentItem.propTypes = {
+  employment: PropTypes.object
 };
 
 export default EmploymentItem;

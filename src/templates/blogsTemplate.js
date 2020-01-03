@@ -3,7 +3,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 // data is injected via the graphql query below
-const BlogTemplate = ({ data }) => {
+const BlogsTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const { title, date } = frontmatter;
@@ -22,17 +22,21 @@ const BlogTemplate = ({ data }) => {
   );
 };
 
-export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
-        title
+export const blogsQuery = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+          frontmatter {
+            path
+            title
+            date
+          }
+        }
       }
     }
   }
 `;
 
-export default BlogTemplate;
+export default BlogsTemplate;

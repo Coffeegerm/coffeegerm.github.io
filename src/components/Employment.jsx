@@ -30,17 +30,15 @@ const EMPLOYMENT_HISTORY = [
   }
 ];
 
-const Employment = () => {
-  return (
-    <section id="three">
-      <h2>Employment History</h2>
-      <div className="row">
-        {EMPLOYMENT_HISTORY.map(item => (
-          <EmploymentItem employment={item} />
-        ))}
-      </div>
-    </section>
-  );
-};
+const Employment = () => (
+  <section id="three">
+    <h2>Employment History</h2>
+    <div className="row">
+      {EMPLOYMENT_HISTORY.map(item => (
+        <EmploymentItem employment={item} />
+      ))}
+    </div>
+  </section>
+);
 
 export default Employment;
