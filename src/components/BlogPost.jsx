@@ -2,18 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BlogPost = props => {
-  const { title } = props;
+  const { post } = props;
+  const { html, frontmatter } = post;
+  const { title, date } = frontmatter;
   return (
     <article className="6u 12u$(xsmall) work-item">
-      <h2>
-        <strong>{title}</strong>
-      </h2>
+      {console.log(post)}
+      <h3>
+        <strong>
+          {title} - {date}
+        </strong>
+      </h3>
+      {html}
     </article>
   );
 };
 
 BlogPost.propTypes = {
-  title: PropTypes.string.isRequired
+  post: PropTypes.object
 };
 
 export default BlogPost;

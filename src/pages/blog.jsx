@@ -10,9 +10,8 @@ const Blog = () => (
     <div id="main">
       <h1>The Coffeegerms Blog</h1>
       <p>The musings of a coffee and code loving nerd.</p>
+      <BlogPosts />
     </div>
-
-    <BlogPosts />
   </Layout>
 );
 
