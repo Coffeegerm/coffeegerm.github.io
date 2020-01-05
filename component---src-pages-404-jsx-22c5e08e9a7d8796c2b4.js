@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{pssB:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),o=n.n(a),c=n("Wbzz"),l=n("L12J");t.default=function(){return o.a.createElement(l.a,{title:"404"},o.a.createElement("h1",null,"404"),o.a.createElement("p",null,"Somehow you ended here"),o.a.createElement(c.Link,{to:"/",className:"button"},"Let's go back"))}}}]);
+//# sourceMappingURL=component---src-pages-404-jsx-22c5e08e9a7d8796c2b4.js.map
