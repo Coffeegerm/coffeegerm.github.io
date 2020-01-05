@@ -6,7 +6,7 @@ import avatar from '../assets/images/avatar.jpg';
 const Header = () => (
   <header id="header">
     <div className="inner">
-      <a className="image avatar" href="twitter.com/coffeegerm">
+      <a className="image avatar" href="/">
         <img src={avatar} alt="" />
       </a>
       <h1>

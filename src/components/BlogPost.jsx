@@ -1,19 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 const BlogPost = ({
   post: {
-    html,
-    frontmatter: { title, date }
+    frontmatter: { title, date, description, excerpt },
+    fields: { slug }
   }
 }) => (
-  <article className="6u 12u$(xsmall) work-item">
-    <h3>
-      <strong>
-        {title} - {date}
-      </strong>
-    </h3>
-    {html}
+  <article key={slug}>
+    <header>
+      <h3>
+        <Link style={{ boxShadow: `none` }} to={slug}>
+          {title || slug}
+        </Link>
+      </h3>
+      <small>{date}</small>
+    </header>
+    <section>
+      <p
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: description || excerpt
+        }}
+      />
+    </section>
   </article>
 );
 

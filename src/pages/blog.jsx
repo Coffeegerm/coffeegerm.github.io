@@ -1,13 +1,43 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import BlogPosts from '../components/BlogPosts';
+import BlogPost from '../components/BlogPost';
 
-const Blog = () => (
-  <Layout title="Blog">
-    <h1>The Coffeegerms Blog</h1>
-    <p>The musings of a coffee and code loving nerd.</p>
-    <BlogPosts />
-  </Layout>
-);
+const BlogIndex = props => {
+  const {
+    data: {
+      allMarkdownRemark: { edges: posts }
+    },
+    location
+  } = props;
 
-export default Blog;
+  return (
+    <Layout location={location} title="Blog">
+      {posts.map(({ node: post }) => (
+        <BlogPost post={post} />
+      ))}
+    </Layout>
+  );
+};
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default BlogIndex;

@@ -15,6 +15,8 @@
     "jest": true
   },
   "rules": {
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
     "no-debugger": 0,
     "no-alert": 0,
     "no-await-in-loop": 0,
@@ -66,6 +68,7 @@
     "react/react-in-jsx-scope": 0,
     "react/prefer-stateless-function": 0,
     "react/forbid-prop-types": 0,
+    "react/prop-types": 0,
     "react/no-unescaped-entities": 0,
     "jsx-a11y/accessible-emoji": 0,
     "react/require-default-props": 0,
@@ -114,6 +117,7 @@
   },
   "plugins": [
     // "html",
-    "prettier"
+    "prettier",
+    "react-hooks"
   ]
 }
