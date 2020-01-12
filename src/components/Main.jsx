@@ -10,6 +10,7 @@ const Main = () => (
         the more you can hear&quot; - Ram Dass
       </h2>
     </header>
+
     <p>
       I started programming when I was 15 years old and never stopped breaking
       and fixing, reading and writing, and most importantly; learning.
@@ -20,10 +21,16 @@ const Main = () => (
       playing Magic: The Gathering, reading, playing a few games here and there,
       searching for new beers to try, as well as for the perfect Tom Collins.
     </p>
+
     <ul className="actions">
       <li>
         <Link to="/blog/" className="button">
-          Learn More
+          Blog
+        </Link>
+      </li>
+      <li>
+        <Link to="/uses/" className="button">
+          Uses
         </Link>
       </li>
     </ul>
