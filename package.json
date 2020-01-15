@@ -25,11 +25,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "format": "prettier --write '{gatsby-*.js,src/**/*.{js,jsx,json,css}}'",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "start": "npm run develop",
+    "build": "rm -rf public && rm -rf .cache && gatsby build",
+    "now-build": "gatsby build",
+    "deploy": "yarn build && cp now.json public/ && cd public && now alias $(now) overreacted.io",
+    "dry": "yarn build && cp now.json public/ && cd public && now",
+    "js-to-jsx": "node src/utils/js-to-jsx"
   },
   "devDependencies": {
     "eslint": "^5.3.0",
