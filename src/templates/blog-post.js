@@ -4,67 +4,65 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const {
-      pageContext: { previous, next },
-      data: { markdownRemark: post },
-      location
-    } = this.props;
+const BlogPostTemplate = props => {
+  const {
+    pageContext: { previous, next },
+    data: { markdownRemark: post },
+    location
+  } = props;
 
-    return (
-      <Layout location={location} title="test">
-        <article>
-          <header>
-            <h1
-              style={{
-                marginBottom: 0
-              }}
-            >
-              {post.frontmatter.title}
-            </h1>
-            <p
-              style={{
-                display: `block`
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
-        </article>
-
-        <nav>
-          <ul
+  return (
+    <Layout location={location} title={post.frontmatter.title}>
+      <article>
+        <header>
+          <h1
             style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0
+              marginBottom: 0
             }}
           >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
-      </Layout>
-    );
-  }
-}
+            {post.frontmatter.title}
+          </h1>
+          <p
+            style={{
+              display: `block`
+            }}
+          >
+            {post.frontmatter.date}
+          </p>
+        </header>
+        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <hr />
+      </article>
+
+      <nav>
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
+      </nav>
+    </Layout>
+  );
+};
 
 export default BlogPostTemplate;
 
